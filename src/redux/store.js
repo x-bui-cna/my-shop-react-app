@@ -12,6 +12,7 @@ if (process.env.NODE_ENV === "development") {
 }
 
 const enchancers = [applyMiddleware(...middlewares)];
+
 export const store = createStore(rootReducer, composeEnhancer(...enchancers));
 
 export const persistor = persistStore(store);
